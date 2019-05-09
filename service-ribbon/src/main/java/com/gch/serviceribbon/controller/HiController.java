@@ -18,6 +18,8 @@ public class HiController {
 
     @GetMapping(value = "/hi")
     public String hi(@RequestParam String name) {
-        return helloService.hiService(name);
+        String res = helloService.hiService(name);
+        System.out.println(res);
+        return res;
     }
 }

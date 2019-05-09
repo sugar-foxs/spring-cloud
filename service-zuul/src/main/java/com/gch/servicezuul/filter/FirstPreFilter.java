@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
  * 2019-04-26 23:05
  **/
 @Component
-public class MyFilter extends ZuulFilter {
+public class FirstPreFilter extends ZuulFilter {
 
     @Override
     public String filterType() {
@@ -40,7 +40,7 @@ public class MyFilter extends ZuulFilter {
             ctx.setResponseStatusCode(401);
             try {
                 ctx.getResponse().getWriter().write("token is empty");
-            }catch (Exception e){}
+            } catch (Exception e){}
 
             return null;
         }

@@ -15,8 +15,16 @@ public class Config {
     @Value("${bar}")
     public String bar;
 
+    @Value("${base}")
+    public String base;
+
 
     public String getBar() {
         return bar;
+    }
+
+
+    public String getBase() {
+        return base;
     }
 }

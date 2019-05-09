@@ -30,8 +30,8 @@ public class UserController {
     @RequestMapping("/hi")
     public List<User> home(@RequestParam(value = "name", defaultValue = "gch") String name) {
         List<User> res = new ArrayList<>();
-        res.add(new User(1,"gch"));
-        res.add(new User(2,"cxh"));
+        res.add(new User(1,ipConfiguration.getPort()+"base:"+config.getBase()));
+        res.add(new User(2,ipConfiguration.getPort()+"bar:"+config.getBar()));
 
         return res;
     }

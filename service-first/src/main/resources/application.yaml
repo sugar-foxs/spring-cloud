@@ -6,6 +6,7 @@ spring:
       label: master
       profile: dev
       uri: http://localhost:8888/
+      name: ${spring.application.name},base
     bus:
       enabled: true
       trace:
