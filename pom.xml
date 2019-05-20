@@ -22,6 +22,7 @@
         <module>service-ribbon</module>
         <module>config-server</module>
         <module>service-zuul</module>
+        <module>consul</module>
     </modules>
 
     <properties>

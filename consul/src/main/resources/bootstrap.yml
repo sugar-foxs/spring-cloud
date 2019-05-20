@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: consul-client
+server:
+  port: 8766

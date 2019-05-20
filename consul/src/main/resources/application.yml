@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        tags: version=1.0,author=gch
+        healthCheckPath: /health
+        healthCheckInterval: 5s
+#        instanceId: ${spring.application.name}:${random.int[10000,99999]}
