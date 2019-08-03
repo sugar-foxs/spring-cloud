@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * guchunhui
  * 2019-04-26 21:22
@@ -19,9 +21,10 @@ public class HiController {
     HelloService helloService;
 
     @GetMapping(value = "/hi")
-    public String hi(@RequestParam String name) {
+    public String hi(@RequestParam String name, HttpServletRequest request) {
         String res = helloService.hiService(name);
         log.info("--hi--"+res);
+        log.info("TraceId={},spanId={}",request.getHeader("X-B3-TraceId"),request.getHeader("X-B3-SpanId"));
         return res;
     }
 }

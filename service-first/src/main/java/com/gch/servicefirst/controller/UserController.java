@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.security.auth.login.Configuration;
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +31,9 @@ public class UserController {
     private Config config;
 
     @RequestMapping("/hi")
-    public List<User> home(@RequestParam(value = "name", defaultValue = "gch") String name) {
+    public List<User> home(@RequestParam(value = "name", defaultValue = "gch") String name, HttpServletRequest request) {
+        log.info("TraceId={},spanId={}",request.getHeader("X-B3-TraceId"),request.getHeader("X-B3-SpanId"));
+
         List<User> res = new ArrayList<>();
         res.add(new User(1,ipConfiguration.getPort()+",base:"+config.getBase()));
         res.add(new User(2,ipConfiguration.getPort()+",bar:"+config.getBar()));
