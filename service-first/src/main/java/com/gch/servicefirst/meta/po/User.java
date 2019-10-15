@@ -1,11 +1,11 @@
-package com.gch.servicefirst.meta;
+package com.gch.servicefirst.meta.po;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * guchunhui
+ * @author guchunhui
  * 2019-04-27 20:44
  **/
 @Data

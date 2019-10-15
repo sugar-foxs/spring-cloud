@@ -11,6 +11,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>service-first</name>
 
+    <properties>
+        <dozer.version>6.2.0</dozer.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,6 +44,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.dozermapper</groupId>
+            <artifactId>dozer-spring-boot-starter</artifactId>
+            <version>${dozer.version}</version>
         </dependency>
     </dependencies>
 
