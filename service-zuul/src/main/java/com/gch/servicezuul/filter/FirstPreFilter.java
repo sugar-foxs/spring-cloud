@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
+import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.PRE_DECORATION_FILTER_ORDER;
+import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.PRE_TYPE;
+
 /**
  * guchunhui
  * 2019-04-26 23:05
@@ -15,17 +18,17 @@ public class FirstPreFilter extends ZuulFilter {
 
     @Override
     public String filterType() {
-        return "pre";
+        return PRE_TYPE;
     }
 
     @Override
     public int filterOrder() {
-        return 0;
+        return PRE_DECORATION_FILTER_ORDER;
     }
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        return false;
     }
 
     @Override

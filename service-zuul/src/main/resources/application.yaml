@@ -15,3 +15,6 @@ zuul:
     api-b:
       path: /service-ribbon/**
       serviceId: service-ribbon
+    api-c:
+      path: /sso-server/**
+      serviceId: sso-server
